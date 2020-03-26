@@ -5,10 +5,13 @@
     </head>
     <body>
         @extends('layouts.default')
-        @section('content')
         @section('title', 'Blog - Home')
+        @section('content')
         Home Page
-        <a href="{{route('login')}}">Login</a><a href="{{route('signup')}}">Sign Up</a>
+        <br/>
+        <a href="{{route('session.login')}}">Login</a>
+        <br/>
+        <a href="{{route('user.signup')}}">Sign Up</a>
         @stop
     </body>
 </html>
