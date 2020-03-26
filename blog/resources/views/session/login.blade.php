@@ -14,6 +14,8 @@
             <br/>
             Password:<input type="password" name="password" value="{{old('password')}}" />
             <br/>
+            <input type="checkbox" name="remember" />Remember me
+            <br/>
             <button type="submit">Login</button>
         </form>
         @stop

@@ -38,4 +38,9 @@ class User extends Authenticatable
     ];
     
     protected $table = 'user';
+    
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
+    }
 }
