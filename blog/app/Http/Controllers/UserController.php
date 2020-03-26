@@ -31,6 +31,10 @@ class UserController extends Controller
     
     public function getUser(User $user)
     {
-        return view('userPages.userInfo', compact('user'));
+        $statuses = $user->statuses()
+                ->orderBy('created_at', 'desc')
+                ->paginate(10);
+        
+        return view('userPages.userInfo', compact('user', 'statuses'));
     }
 }

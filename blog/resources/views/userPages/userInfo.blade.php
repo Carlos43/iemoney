@@ -17,6 +17,21 @@
             {{ method_field('DELETE') }}
             <button type="submit">Logout</button>
         </form>
+        <hr/>
+        @if ($statuses->count() > 0)
+        <ul>
+            @for($i =0 ; $i<)
+             @foreach ($statuses as $status)
+             <li>
+                 {{ $user->name }} - {{ $status->created_at->diffForHumans() }}
+                 <br/>
+                 {{ $status->content }}
+             </li>
+             @endforeach
+        </ul>
+        @else
+            No Status
+        @endif
         @stop
     </body>
 </html>
