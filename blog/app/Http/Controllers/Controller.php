@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
-class Controller
+class Controller extends BaseController
 {
+    
+    use AuthorizesRequests, ValidatesRequests;
+    
     public function home()
     {
-//        return 'home';
         return view('static_pages/home');
     }
 }
